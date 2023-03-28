@@ -10,6 +10,7 @@ import com.example.assesment1_nisafauziyyah.databinding.ActivityMainBinding
 import java.text.DecimalFormat
 
 
+
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
