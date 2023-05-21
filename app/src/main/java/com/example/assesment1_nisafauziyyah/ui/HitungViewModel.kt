@@ -1,5 +1,6 @@
 package com.example.assesment1_nisafauziyyah.ui
 
+import android.icu.text.DecimalFormat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -19,7 +20,7 @@ class HitungViewModel : ViewModel() {
     fun getResultTextLiveData(): LiveData<String> = resultTextLiveData
     fun getResultTypeLiveData(): LiveData<String> = resultTypeLiveData
 
-    fun hitung(editInput: Double, textResultType: Double) {
+    fun hasil(editInput: Double, textResultType: Double) {
         val resultText: String
         if (selectedUnit == "Fahrenheit") {
             resultText = df.format((editInput - 32) * 5 / 9)
@@ -31,13 +32,12 @@ class HitungViewModel : ViewModel() {
         resultTextLiveData.value = resultText
 
         val kategori = when (textResultType) {
-            in 0.0..10.0 -> KategoriTemperature.DINGIN
-            in 10.0..20.0 -> KategoriTemperature.DINGIN
-            in 20.0..30.0 -> KategoriTemperature.PANAS
-            else -> KategoriTemperature.PANAS
+            hasil >= 1.00 && hasil < 20.00 -> KategoriTemperature.DINGIN
+            >= 20.00 && resultText < 40.00 -> KategoriTemperature.PANAS
+            else -> KategoriTemperature.EKSTRIM
         }
 
-        val hasilObj = Hasil(resultText.toDouble(), kategori)
+        val hasilObj = Hasil(resultText.toDouble())
         hasil.value = hasilObj
     }
 

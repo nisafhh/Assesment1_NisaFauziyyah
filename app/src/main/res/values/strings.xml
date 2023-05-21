@@ -23,5 +23,7 @@
     <string name="saranDingin">Gunakan jaket dan penghangat agar tubuhmu tidak kedinginan atau terkena flu</string>
     <string name="panas">Suhu sedang Panas</string>
     <string name="saranPanas">Sebaiknya menggunakan pakaian tipis dan jangan lupa menggunakan sunscreen agar tubuhmu tetap dalam kondisi normal dan aman ketika terkena paparan sinar matahari</string>
+    <string name="ekstrim">Suhu sedang Ekstrim</string>
+    <string name="saranEkstrim">Hati - hati, Jaga kesehatan yaa. Cuaca seperti ini bisa membuat mu sakit.</string>
 
 </resources>

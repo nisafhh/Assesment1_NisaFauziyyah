@@ -65,7 +65,7 @@ class HitungFragment : Fragment() {
                 return
             }
 
-            viewModel.hitung(editInput.toDouble(), textResultType.toDouble())
+            viewModel.hasil(editInput.toDouble(), textResultType.toDouble())
         }
 
         private fun showResult(result: Hasil?) {
@@ -76,8 +76,8 @@ class HitungFragment : Fragment() {
         }
 
         private fun shareData() {
-            val message = getString(R.string.bagikan_template, binding.textResultView.text)
-            val msgKat = message + " " + binding.kategoriTemperatureTextView.text
+            val message = getString(R.string.bagikan_template, binding.textResultType.text)
+            val msgKat = message + " " + binding.textResultType.text
 
             val shareIntent = Intent(Intent.ACTION_SEND)
             shareIntent.type = "text/plain"

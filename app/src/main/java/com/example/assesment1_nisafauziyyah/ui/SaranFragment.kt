@@ -39,6 +39,10 @@ class SaranFragment : Fragment() {
                 actionBar?.title = getString(R.string.dingin)
                 binding.textView.text = getString(R.string.saranDingin)
             }
+            KategoriTemperature.EKSTRIM -> {
+                actionBar?.title = getString(R.string.ekstrim)
+                binding.textView.text = getString(R.string.saranEkstrim)
+            }
         }
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
