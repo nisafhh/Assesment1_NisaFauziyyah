@@ -1,7 +1,27 @@
 <resources>
-    <string name="app_name">Temperature Converter</string>
-    <string name="appHeading" />
+    <string name="temperature_converter">Temperature Converter</string>
     <string name="fahrenheit">Fahrenheit</string>
-    <string name="textResult">0.0</string>
+    <string name="celsius">Celcius</string>
+
+    <string name="backgroundimge_des">PUSING</string>
+    <string name="app_name">Temperature Converter</string>
+
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+
+    <string name="Heading" />
+    <string name="TittleApp">Temperature Converter</string>
+    <string name="Fahrenheit">Fahrenheit</string>
+    <string name="textRes">0.0</string>
+    <string name="textResult">Hasil</string>
+    <string name="editInput_invalid">Derajat SUHU tidak boleh kosong!</string>
+
+    <string name="lihat_saran">Lihat Saran</string>
+    <string name="bagikan">Bagikan</string>
+    <string name="bagikan_template">Suhu Akhir : %1$s \n Kategori : </string>
+
+    <string name="dingin">Suhu sedang Dingin</string>
+    <string name="saranDingin">Gunakan jaket dan penghangat agar tubuhmu tidak kedinginan atau terkena flu</string>
+    <string name="panas">Suhu sedang Panas</string>
+    <string name="saranPanas">Sebaiknya menggunakan pakaian tipis dan jangan lupa menggunakan sunscreen agar tubuhmu tetap dalam kondisi normal dan aman ketika terkena paparan sinar matahari</string>
 
 </resources>

@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assesment1_NisaFauziyyah"
         tools:targetApi="31">
+
         <activity
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:name=".MainActivity"

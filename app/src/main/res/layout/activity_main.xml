@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:textAlignment="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
-
 
     <ImageView
         android:id="@+id/imageView"
@@ -18,24 +17,25 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/red_bg" />
 
     <TextView
-        android:id="@+id/appHeading"
+        android:id="@+id/Heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/andika_new_basic_bold"
-        android:text="@string/app_name"
-        android:textColor="#020101"
-        android:textSize="32dp"
+        android:text="@string/TittleApp"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <LinearLayout
-        android:id="@+id/selectType"
+        android:id="@+id/pilihTipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -43,34 +43,33 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appHeading">
+        app:layout_constraintTop_toBottomOf="@+id/Heading">
 
         <TextView
-            android:id="@+id/textSelect"
+            android:id="@+id/pilihText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:fontFamily="@font/andika_new_basic_bold"
-            android:text="@string/fahrenheit"
+            android:text="@string/Fahrenheit"
             android:textColor="#FFFFFF"
-            android:textSize="22sp" />
+            android:textSize="18sp" />
 
         <ImageView
-            android:id="@+id/imgSelect"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:id="@+id/pilihGambar"
+            android:layout_width="14dp"
+            android:layout_height="21dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_down_arrow" />
     </LinearLayout>
 
     <EditText
-        android:id="@+id/editInput"
+        android:id="@+id/EditInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="28dp"
         android:background="@android:color/transparent"
-        android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:fontFamily="sans-serif-light"
         android:hint="32"
@@ -78,41 +77,39 @@
         android:maxLength="6"
         android:textAlignment="center"
         android:textColorHint="#99FFFFFF"
-        android:textSize="54sp"
+        android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectType" />
-
-    <TextView
-        android:id="@+id/textResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="228dp"
-        android:text="@string/textResult"
-        android:textColor="@color/red_500"
-        android:textSize="54sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/pilihTipe" />
 
     <TextView
         android:id="@+id/textResultType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:fontFamily="@font/andika_new_basic_bold"
-        android:text="Celcius"
-        android:textColor="@color/red_500"
-        android:textSize="22sp"
+        android:layout_marginBottom="200dp"
+        android:text="0.0"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textColorLink="#FFE14A"
+        android:textSize="44sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textResult"
-        app:layout_constraintVertical_bias="0.678" />
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="92dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/textResult"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textColorHint="#99FFFFFF"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

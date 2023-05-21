@@ -17,6 +17,4 @@
         <item name="radioButtonStyle">
             @style/Widget.AppCompat.CompoundButton.RadioButton</item>
     </style>
-
-
 </resources>

@@ -10,12 +10,10 @@ import com.example.assesment1_nisafauziyyah.databinding.ActivityMainBinding
 import java.text.DecimalFormat
 
 
-
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
     lateinit var selectedUnit: String
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,27 +22,26 @@ class MainActivity : AppCompatActivity() {
         val df = DecimalFormat("#.##")//Decimal formatter
         selectedUnit = "Fahrenheit"
 
-        binding.selectType.setOnClickListener() {
+        binding.pilihTipe.setOnClickListener() {
             showAlertDialog()
 
         }
 
-        binding.editInput.addTextChangedListener() {
-            val textResult: String
-            var inputVal = binding.editInput.text.toString()
+        binding.EditInput.addTextChangedListener() {
+            val resultText: String
+            var inputVal = binding.EditInput.text.toString()
             if (inputVal.isNotEmpty()) {
                 var doubleInput = inputVal.toDouble()
-
                 if (selectedUnit == "Fahrenheit") {
-                    textResult = df.format((doubleInput - 32 ) * 5 / 9)
+                    resultText = df.format((doubleInput - 32) * 5 / 9)
                     binding.textResultType.text = "Celsius"
                 } else {
                     //(0°C × 9/5) + 32
-                    textResult = df.format((doubleInput * 9 / 5 ) + 32)
+                    resultText = df.format((doubleInput * 9 / 5) + 32)
                     binding.textResultType.text = "Fahrenheit"
                 }
 
-                binding.textResult.text = textResult
+                binding.textResult.text = resultText
             }
 
         }
@@ -59,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         alertDialog.setSingleChoiceItems(items, checkedItem,
             DialogInterface.OnClickListener { dialog, which ->
                 selectedUnit = items[which]
-                binding.textResultType.setText(items[which])
+                binding.pilihText.setText(items[which])
             })
         alertDialog.setPositiveButton(
             android.R.string.ok,
