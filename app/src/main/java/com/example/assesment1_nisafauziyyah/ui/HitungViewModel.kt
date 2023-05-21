@@ -30,31 +30,32 @@ class HitungViewModel : ViewModel() {
             resultTypeLiveData.value = "Fahrenheit"
         }
         resultTextLiveData.value = resultText
+//
+//        val kategori = when (textResultType) {
+//            hasil >= 1.0 && hasil < 20.0 -> KategoriTemperature.DINGIN
+//            >= 20.0 && resultText < 40.0 -> KategoriTemperature.PANAS
+//            else -> KategoriTemperature.EKSTRIM
+//        }
+//
+//        val hasilObj = Hasil(resultText.toDouble())
+//        hasil.value = hasilObj
+//    }
 
-        val kategori = when (textResultType) {
-            hasil >= 1.00 && hasil < 20.00 -> KategoriTemperature.DINGIN
-            >= 20.00 && resultText < 40.00 -> KategoriTemperature.PANAS
-            else -> KategoriTemperature.EKSTRIM
+        fun startNav() {
+            navigasi.value = hasil.value?.kategori
         }
 
-        val hasilObj = Hasil(resultText.toDouble())
-        hasil.value = hasilObj
-    }
+        fun endNav() {
+            navigasi.value = null
+        }
 
-    fun startNav() {
-        navigasi.value = hasil.value?.kategori
-    }
+//    fun setKategori(kategori: KategoriTemperature) {
+//        kategoriTemperatureLiveData.value = kategori
+//    }
 
-    fun endNav() {
-        navigasi.value = null
-    }
-
-    fun setKategori(kategori: KategoriTemperature) {
-        kategoriTemperatureLiveData.value = kategori
-    }
-
-    fun setSelectedUnit(unit: String) {
-        selectedUnit = unit
-        resultTypeLiveData.value = if (unit == "Fahrenheit") "Celsius" else "Fahrenheit"
+        fun setSelectedUnit(unit: String) {
+            selectedUnit = unit
+            resultTypeLiveData.value = if (unit == "Fahrenheit") "Celsius" else "Fahrenheit"
+        }
     }
 }

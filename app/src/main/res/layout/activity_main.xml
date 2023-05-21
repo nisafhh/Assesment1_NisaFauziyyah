@@ -9,4 +9,4 @@
     tools:context=".MainActivity"
     tools:viewBindingIgnore="true"
     app:defaultNavHost="true"
-    app:navgraph="@navigation/navigation"/>
+    app:navGraph="@navigation/navigation"/>
