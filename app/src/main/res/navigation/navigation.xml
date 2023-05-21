@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/hitungFragment"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <fragment
+        android:id="@+id/hitungFragment"
+        android:name="com.example.assesment1_nisafauziyyah.ui.HitungFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_hitung">
+        <action
+            android:id="@+id/action_hitungFragment_to_saranFragment"
+            app:destination="@id/saranFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/saranFragment"
+        android:name="com.example.assesment1_nisafauziyyah.ui.SaranFragment"
+        tools:layout="@layout/fragment_saran">
+        <argument
+            android:name="kategori"
+            app:argType="com.example.assesment1_nisafauziyyah.model.KategoriTemperature" />
+    </fragment>
+
+</navigation>

@@ -1,115 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myNavHostFragment"
+    android:name="androidx.navigation.fragment.NavHostFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/red_bg" />
-
-    <TextView
-        android:id="@+id/Heading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/andika_new_basic_bold"
-        android:text="@string/TittleApp"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
-
-    <LinearLayout
-        android:id="@+id/pilihTipe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Heading">
-
-        <TextView
-            android:id="@+id/pilihText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/andika_new_basic_bold"
-            android:text="@string/Fahrenheit"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
-
-        <ImageView
-            android:id="@+id/pilihGambar"
-            android:layout_width="14dp"
-            android:layout_height="21dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_down_arrow" />
-    </LinearLayout>
-
-    <EditText
-        android:id="@+id/EditInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:background="@android:color/transparent"
-        android:ems="10"
-        android:fontFamily="sans-serif-light"
-        android:hint="32"
-        android:inputType="numberDecimal"
-        android:maxLength="6"
-        android:textAlignment="center"
-        android:textColorHint="#99FFFFFF"
-        android:textSize="45sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pilihTipe" />
-
-    <TextView
-        android:id="@+id/textResultType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="200dp"
-        android:text="0.0"
-        android:textAlignment="center"
-        android:textColor="#FF0000"
-        android:textColorLink="#FFE14A"
-        android:textSize="44sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
-        android:fontFamily="sans-serif-light"
-        android:text="@string/textResult"
-        android:textAlignment="center"
-        android:textColor="#FF0000"
-        android:textColorHint="#99FFFFFF"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    tools:context=".MainActivity"
+    tools:viewBindingIgnore="true"
+    app:defaultNavHost="true"
+    app:navgraph="@navigation/navigation"/>
