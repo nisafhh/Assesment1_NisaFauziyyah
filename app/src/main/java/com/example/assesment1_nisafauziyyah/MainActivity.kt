@@ -117,5 +117,7 @@ class MainActivity : AppCompatActivity() {
         val alert: AlertDialog = alertDialog.create()
         alert.setCanceledOnTouchOutside(false)
         alert.show()
+
+        //terimakasih kak ehehehehehe semoga nilai aku ab
     }
 }
