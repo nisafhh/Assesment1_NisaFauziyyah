@@ -24,4 +24,10 @@
     <string name="panas">Suhu sedang Panas</string>
     <string name="saranPanas">Sebaiknya menggunakan pakaian tipis dan jangan lupa menggunakan sunscreen agar tubuhmu tetap dalam kondisi normal dan aman ketika terkena paparan sinar matahari</string>
 
+    <string name="channel_name">Updater</string>
+    <string name="channel_desc">Update data suhu</string>
+
+    <string name="notif_title">Ada suhu baru!</string>
+    <string name="notif_text">Cek sekarang biar nggak penasaran..</string>
+
 </resources>
